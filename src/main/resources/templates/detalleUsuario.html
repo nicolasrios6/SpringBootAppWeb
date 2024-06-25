@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle del Usuario</title>
+</head>
+<body>
+    <h1>Detalle del Usuario</h1>
+    <div>
+        <p><strong>Nombre:</strong> <span th:text="${usuario.nombre}"></span></p>
+        <p><strong>Email:</strong> <span th:text="${usuario.correo}"></span></p>
+    </div>
+    <a href="/usuarios">Volver a la Lista de Usuarios</a> |
+    <a th:href="@{/usuarios/editar/{id}(id=${usuario.id})}">Editar</a> |
+    <a th:href="@{/usuarios/eliminar/{id}(id=${usuario.id})}">Eliminar</a>
+</body>
+</html>
